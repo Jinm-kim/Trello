@@ -1,0 +1,268 @@
+/* layout css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: #74c0fc;
+    font-size: 15px;
+}
+
+.wrapper {
+    min-width: 1180px;
+    position: relative;
+}
+
+i {
+    width: 30px;
+}
+
+/* header css  */
+
+#header {
+    height: 100px;
+    text-align: center;
+}
+.logo {
+    padding-top: 20px;
+    font-size: 5rem;
+    color: #fff;
+    font-family: "Yellowtail", cursive;
+}
+/* modal css */
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+.close {
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #b9b7b7;
+}
+.card_modal {
+    width: 700px;
+    height: auto;
+    background-color: #fff;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.modal_header,
+.modal_middleHead {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.modal_edit {
+    margin-left: 10px;
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+.modal_edit:hover {
+    background-color: #b9b7b7;
+}
+.edit_title_box {
+    display: none;
+}
+
+.edit_title {
+    width: 100%;
+    height: 27px;
+    outline: 0;
+}
+
+.saveButton {
+    background-color: #d8eedc;
+    margin-top: 20px;
+}
+
+.saveButton:hover {
+    background-color: #8ce99a;
+}
+
+.closeButton {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#edit_text {
+    resize: none;
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+}
+
+.edit_box {
+    display: none;
+}
+/* section css */
+
+section.board {
+    padding: 0 100px;
+    max-width: 1140px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.trello_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 300px;
+    height: auto;
+    background-color: rgb(233, 230, 230, 0.8);
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.trello_card h2 {
+    margin: 20px 0 10px 20px;
+    text-align: left;
+    color: rgb(14, 14, 14);
+    font-size: 20px;
+}
+
+.deleteList {
+    display: inline-block;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #b9b7b7;
+    cursor: pointer;
+}
+
+.deleteList:hover {
+    color: #000;
+}
+
+.trello_card_list {
+    margin-top: 10px;
+}
+
+.card_form {
+    display: none;
+}
+
+.add_button {
+    width: 270px;
+    height: 40px;
+    margin: 10px auto;
+    font-family: inherit;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #000;
+    font-size: 1rem;
+}
+
+.add_button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.trello_card_list > li {
+    width: 270px;
+    height: 40px;
+    border-radius: 4px;
+    margin: 10px auto 0;
+    padding-top: 10px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.trello_card_list > li:hover {
+    background-color: #b9b7b7;
+}
+
+.write_card,
+.write_list {
+    width: 270px;
+    height: 40px;
+    margin: 10px auto 0;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+}
+
+.write_list {
+    display: none;
+}
+
+.save {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.save.list {
+    display: none;
+}
+
+.save_button {
+    width: 60px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background-color: #057e17;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.save_button:hover {
+    background-color: #10b929;
+}
+
+.save_close {
+    margin-left: 10px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.save_close:hover {
+    color: #b9b7b7;
+}
+
+/* 제어 */
+
+.showing {
+    display: block;
+}
+
+.non_showing {
+    display: none;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="reset.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Yellowtail&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"
+        ></script>
+        <title>Trello</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- modal -->
+            <div class="modal">
+                <div class="card_modal">
+                    <span class="close">&times;</span>
+                    <div class="modal_header">
+                        <i class="fas fa-calendar-minus"></i>
+                        <h1>제목이 들어갈 자리입니다.</h1>
+                        <button class="modal_edit titleEdit">EDIT</button>
+                    </div>
+                    <div class="edit_title_box">
+                        <input type="text" class="edit_title" />
+                        <button class="modal_edit saveButton">SAVE</button>
+                        <!-- <button class="modal_edit deleteButton">삭제</button> -->
+                        <div class="closeButton">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal_middle">
+                        <div class="modal_middleHead">
+                            <i class="fas fa-list"></i>
+                            <h2>
+                                Description
+                            </h2>
+                            <button class="modal_edit descriptionEdit">
+                                EDIT
+                            </button>
+                        </div>
+
+                        <div class="edit_box">
+                            <textarea
+                                name="description"
+                                id="edit_text"
+                            ></textarea>
+                            <button class="modal_edit saveButton">SAVE</button>
+                            <div class="closeButton">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- board -->
+
+            <header id="header">
+                <h1 class="logo">
+                    Trello
+                </h1>
+            </header>
+
+            <section class="board">
+                <!-- 동적으로 list 생성 -->
+
+                <!-- <div class="trello_card add_list1">
+                    <h2>제목</h2>
+                    <ul class="trello_card_list">
+                        <li>공부</li>
+                    </ul>
+                    <form class="card_form">
+                        <input
+                            type="text"
+                            class="write_card showing"
+                            placeholder="Enter a title for your card ..."
+                        />
+                        <div class="save card">
+                            <button class="save_button saveCard">
+                                save
+                            </button>
+                            <span class="save_close closeCard">&times;</span>
+                        </div>
+                    </form>
+                    <button class="add_button card_button">
+                        <i class="fas fa-plus"></i>add another CARD
+                    </button>
+                </div> -->
+
+                <div class="trello_card add_card">
+                    <input
+                        type="text"
+                        class="write_list"
+                        placeholder="Enter a title for your list ..."
+                    />
+                    <div class="save list">
+                        <button class="save_button saveList">
+                            save
+                        </button>
+
+                        <span class="save_close closeList">&times;</span>
+                    </div>
+
+                    <button class="add_button list_button">
+                        <i class="fas fa-plus"></i>add LIST
+                    </button>
+                </div>
+            </section>
+        </div>
+        <script src="./button.js" defer type="text/javascript"></script>
+        <script src="./card.js" defer type="text/javascript"></script>
+        <script src="./modal.js" defer type="text/javascript"></script>
+    </body>
+</html>
